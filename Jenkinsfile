@@ -6,21 +6,30 @@ pipeline {
     }
   } 
     stages { 
-        stage ('Build') { 
-          sh 'npm install'
+        stage ('Build') {
+          steps {
+            sh 'npm install'
+          }  
         }
         stage ('Test') { 
-          echo 'Test Stage'
+          steps {
+            echo 'Test Stage'
+          }
         }
         stage ('QA') { 
-          echo 'QA Stage'
+          steps {
+            echo 'QA Stage'
+          }
         }
         stage ('Deploy') { 
-          echo 'Deploy Stage'
+          steps {
+            echo 'Deploy Stage'
+          }
         }
         stage ('Monitor') { 
-          echo 'Monitoring'
+          steps {
+            echo 'Monitoring'
+          }
         }
- 
     }           
  }
