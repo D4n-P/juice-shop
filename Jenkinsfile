@@ -8,9 +8,7 @@ pipeline {
     stages { 
         stage ('Build') {
           steps {
-            dir(path: '/tmp') {
-              sh 'npm install'
-            }
+            sh 'yarn install'
           }  
         }
         stage ('Test') { 
