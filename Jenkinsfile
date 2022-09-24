@@ -8,7 +8,6 @@ pipeline {
     stages { 
         stage ('Build') {
           steps {
-            sh 'chown -R 112:120 "/.npm"'
             sh 'npm install'
           }  
         }
