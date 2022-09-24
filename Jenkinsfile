@@ -2,13 +2,15 @@ pipeline {
   agent {
     docker {
       image 'node:18-alpine3.15'
-      args '-p 8001:8001 -w /app'
+      args '-p 8001:8001'
     }
   } 
     stages { 
         stage ('Build') {
           steps {
-            sh 'npm install'
+            dir(path: '/app') {
+              sh 'npm install'
+            }
           }  
         }
         stage ('Test') { 
