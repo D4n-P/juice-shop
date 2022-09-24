@@ -16,7 +16,7 @@ pipeline {
           echo 'QA Stage'
         }
         stage ('Deploy') { 
-          echo 'Deploy Stage
+          echo 'Deploy Stage'
         }
         stage ('Monitor') { 
           echo 'Monitoring'
